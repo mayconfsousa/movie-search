@@ -1,0 +1,7 @@
+{
+  "name": "movie-search",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@tcc/main-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "rimraf dist && parcel build public/index.html"
+  },
+  "dependencies": {
+    "eev": "^0.1.5"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "rimraf": "^2.6.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@tcc/shared",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "apisauce": "^1.0.2"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="https://www.themoviedb.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie Search</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" style="padding-left: 10px; padding-right: 10px;">
+          <a href="#" class="brand-logo">Movie Search</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row">
+      <div id="container" class="col s12">
+        <div id="react-app-container" class="col s12 m8 l9"><div id="react-app"></div></div>
+        <div id="vue-app-container" class="col s12 m4 l3"><div id="vue-app"></div></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="../src/app.js"></script>
+    <script src="../src/index.js"></script>
+
+    <script>
+      window.eev.on('movie-selected', movie => {
+        // Scroll to similar movies on mobile devices
+        if (window.innerWidth <= 600) {
+          const elem = document.querySelector('.pagination');
+          if (elem) elem.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+      });
+    </script>
+  </body>
+</html>
